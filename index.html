@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Sakura OS (first Os on html,css,javascript)</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Safari syntax */
+:-webkit-full-screen {
+  background-color: yellow;
+}
+
+/* IE11 */
+:-ms-fullscreen {
+  background-color: yellow;
+}
+
+/* Standard syntax */
+:fullscreen {
+  background-color: yellow;
+}
+
+/* Style the button */
+button {
+  padding: 20px;
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<button onclick="openFullscreen();">Install SakuraOS</button>
+
+<script>
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+</script>
+
+</body>
+</html>
+
+
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Windows 10 - Using CSS & JS Only</title>
+  
+  
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div id="window" class="window">
+    <div class="icon-computer text-center" id="icon-computer" ondblclick="opencom()">
+        <img src="https://media.istockphoto.com/vectors/icon-vector-id953461400?k=20&m=953461400&s=170667a&w=0&h=lXn00YIYUcPKZSNOZvcAf2HAmSTNf0mNDoiHu7ji1fg=" class="img-responsive">
+        <p>This PC</p>
+    </div>
+
+    <div class="overlay-computer" id="overlay-computer">
+        <div class="fluid-container">
+            <div class="first-row-win" id="first-row-win">
+                <div class="left">
+                    <i class="fa fa-hdd-o"></i>
+                    <i class="fa fa-file-o"></i>
+                    <i class="fa fa-folder"></i>
+                    <span>Front End</span>
+                </div>
+                <div class="right">
+                    <i class="fa fa-window-minimize" onclick="closeopencom()"></i>
+                    <i class="fa fa-window-restore" onclick="returncom()" id="returncam" style="display:none;"></i>
+                    <i class="fa fa-window-maximize" onclick="upercom()" id="upercam"></i>
+                    <i class="fa fa-times" onclick="closecom()"></i>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="second-row-win">
+                <div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a class="home-a" href="#home" aria-controls="home" role="tab" data-toggle="tab">File</a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Home</a></li>
+                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Share</a></li>
+                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">View</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <div class="col-xs-1 text-center">
+                                <i class="fa fa-envelope-open fa-2x"></i>
+                                <p>Mail</p>
+                            </div>
+                            <div class="col-xs-1 text-center">
+                                <i class="fa fa-file-code-o  fa-2x"></i>
+                                <p>Code</p>
+                            </div>
+                            <div class="col-xs-1 text-center">
+                                <i class="fa fa-sticky-note-o fa-2x"></i>
+                                <p>Note</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="profile">
+                            <div class="col-xs-1 text-center">
+                                <i class="fa fa-user-circle fa-2x"></i>
+                                <p>User</p>
+                            </div>
+                            <div class="col-xs-1 text-center">
+                                <i class="fa fa-battery-4  fa-2x"></i>
+                                <p>battery</p>
+                            </div>
+                            <div class="col-xs-1 text-center">
+                                <i class="fa fa-book fa-2x"></i>
+                                <p>Book</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="messages">
+                            <div class="col-xs-1 text-center">
+                                <i class="fa fa-car fa-2x"></i>
+                                <p>Car</p>
+                            </div>
+                            <div class="col-xs-1 text-center">
+                                <i class="fa fa-camera-retro  fa-2x"></i>
+                                <p>cam</p>
+                            </div>
+                            <div class="col-xs-1 text-center">
+                                <i class="fa fa-building fa-2x"></i>
+                                <p>build</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="settings">
+                            <div class="col-xs-1 text-center">
+                                <i class="fa fa-cubes fa-2x"></i>
+                                <p>cubes</p>
+                            </div>
+                            <div class="col-xs-1 text-center">
+                                <i class="fa fa-coffee fa-2x"></i>
+                                <p>coffee</p>
+                            </div>
+                            <div class="col-xs-1 text-center">
+                                <i class="fa fa-film fa-2x"></i>
+                                <p>film</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="third-row-win">
+                <div class="col-xs-2">
+                    <i class="fa fa-long-arrow-left"></i>
+                    <i class="fa fa-long-arrow-right"></i>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-arrow-up"></i>
+                </div>
+                <div class="col-xs-7">
+                    <div class="path-input">
+                        <span class="path-icon-input">This PC</span>
+                        <span class="path-icon-input">BIMAL DHAKAL (E:)</span>
+                        <span class="path-icon-input">Programming</span>
+                        <span class="path-icon-input">Front End</span>
+                    </div>
+                    <i class="fa fa-hdd-o path-icon"></i>
+                    <i class="fa fa-repeat path-icon-1"></i>
+                    <i class="path-icon-2">|</i>
+                </div>
+                <div class="col-xs-3">
+                    <input class="search-input" type="text" placeholder="Search">
+                    <i class="fa fa-search path-icon-1"></i>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="fourd-row-win">
+                <div class="col-xs-3" style="border-right: 1px solid #808080;">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="fa fa-star">Quick Access</span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    <p><span class="fa fa-desktop">Desktop</span></p>
+                                    <p><span class="fa fa-download">Downloads</span></p>
+                                    <p><span class="fa fa-file-text">Documents</span></p>
+                                    <p><span class="fa fa-picture-o ">Picture</span></p>
+                                    <p><span class="fa fa-folder ">Folder</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="fa fa-folder-open">Creative Cloud</span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <p><span class="fa fa-desktop">Desktop</span></p>
+                                    <p><span class="fa fa-download">Downloads</span></p>
+                                    <p><span class="fa fa-file-text">Documents</span></p>
+                                    <p><span class="fa fa-picture-o ">Picture</span></p>
+                                    <p><span class="fa fa-folder ">Folder</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <span class="fa fa-desktop">This PC</span>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                    <p><span class="fa fa-desktop">Desktop</span></p>
+                                    <p><span class="fa fa-download">Downloads</span></p>
+                                    <p><span class="fa fa-file-text">Documents</span></p>
+                                    <p><span class="fa fa-picture-o ">Picture</span></p>
+                                    <p><span class="fa fa-folder ">Folder</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-9 ">
+                    <div class="row main-folders">
+                        <div class="col-xs-2 folders text-center" ondblclick="openimg()">
+                            <p class="contain"><img src="img/profile.jpg" class="img-responsive  center-block" alt=""></p>
+                            <span>Photo</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center" ondblclick="openvid()">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500505068/myposter_vlaggb.png" class="img-responsive  center-block" alt=""></p>
+                            <span>Video</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center" ondblclick="opennote()">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500505134/if_sticky-note_299111_px7waa.png" class="img-responsive  center-block" alt=""></p>
+                            <span>Note</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="col-xs-2 folders text-center">
+                            <p class="contain"><img src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500502735/if_folder-blue_285658_f5jeko.svg" class="img-responsive  center-block" style="height: 64px;" alt=""></p>
+                            <span>Folder</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="fived-row-win"></div>
+        </div>
+        <div class="resizer"></div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="image-overlay" id="image-overlay">
+        <div class="fluid-container">
+            <div class="first-row-img">
+                <span class="center-text head-over"></span>
+                <Img src="https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc" Width="1500" Height="1500">
+                <div class="right">
+                    <i class="fa fa-times" onclick="closeimg()"></i>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="second-row-img">
+                <img src="img/profile.jpg" class="center-block img-responsive" style="height:80vh" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="video-overlay" id="video-overlay">
+        <div class="fluid-container">
+            <div class="first-row-vid">
+                <span class="center-text head-over">My Video</span>
+                <div class="right">
+                    <i class="fa fa-times" onclick="closevid()"></i>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="second-row-vid">
+                <div style="position:relative;height:0;padding-bottom:56.25%;">
+		</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="note-overlay" id="note-overlay">
+        <div class="fluid-container">
+            <div class="first-row-note">
+                <span class="center-text head-over">My Note</span>
+                <div class="right">
+                    <i class="fa fa-times" onclick="closenote()"></i>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="second-row-note">
+                <textarea></textarea>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="about-overlay" id="about-overlay">
+        <div class="fluid-container">
+            <div class="first-row-img">
+                <span class="center-text head-over">Info about me</span>
+                <div class="right">
+                    <i class="fa fa-times" onclick="closeabout()"></i>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="second-row-abo">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="start-window-fade hidden-start" id="start-window-fade"></div>
+    <div class="start-window hidden-start" id="start-window">
+        <div class="fluid-container" id="container-start">
+            <div class="row">
+                <div class="col-xs-1 first-column">
+                    <div class="icon-bottom" id="power" onclick="powerOff()">
+                        <i class="fa fa-power-off fa-1x"></i>
+                    </div>
+                    <div class="icon-bottom">
+                        <i class="fa fa-cog fa-1x"></i>
+                    </div>
+                    <div class="icon-bottom">
+                        <i class="fa fa-folder-open-o fa-1x"></i>
+                    </div>
+                    <div class="icon-bottom">
+                        <i class="fa fa-user fa-1x"></i>
+                    </div>
+                    <div class="icon-bottom open-icon-list">
+                        <i class="fa fa-bars fa-1x"></i>
+                    </div>
+                </div>
+                <div class="col-xs-3 second-column">
+                    <div class="wrap-scroll">
+                        <div class="head-med">
+                        </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                        </div>
+                    </div>
+                    <div class="head-med mouse-prient">
+                        <small>Ненужное <i class="fa fa-chevron-down fa-1x"></i></small>
+                    </div>
+                    <div class="head-med">
+                        <small>Программмы</small>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="https://i.pinimg.com/originals/40/8f/d2/408fd20fc3629df18b49e8b4b4fd1acd.jpg" width="35" height="35" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <small class="media-heading">Sakura OS</small>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503387/BeSJ3aet_400x400_hg4g6p.png" width="35" height="35" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <small class="media-heading"></small>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503390/chrome1600_okfqm6.png" width="35" height="35" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <small class="media-heading"></small>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504144/favicon_mmggme.ico" width="35" height="35" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <small class="media-heading"></small>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504181/Photoshop_CC_icon_gyvgzg.png" width="35" height="35" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <small class="media-heading"></small>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504215/illustrator_qgskie.png" width="35" height="35" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <small class="media-heading"></small>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503401/github-desktop-icon_zzzpbq.png" width="35" height="35" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <small class="media-heading"></small>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504321/codepen1600_rd1mh7.png" width="35" height="35" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <small class="media-heading"></small>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" src="http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503387/BeSJ3aet_400x400_hg4g6p.png" width="35" height="35" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <small class="media-heading"></small>
+                        </div>
+                    </div>
+
+
+
+                    </div>
+                </div>
+                <div class="col-xs-4 third-column">
+                    <div class="head-box">
+                        <small>Жизнь с первого взгляда</small>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8 col-xs-push-4 box">
+                            <div class="box-style">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-envelope fa-2x"></i>
+                                </div>
+                                <div>
+                                    Mail
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-xs-pull-8 box">
+                            <div class="box-style text-center">
+                                <div class="mycontainer">
+                                    <div id="day">day</div>
+                                    <div id="number-day">number</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-8 box">
+                            <div class="box-style">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-internet-explorer fa-2x"></i>
+                                </div>
+                                <div>
+                                    Microsoft Edge
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-picture-o fa-2x"></i>
+                                </div>
+                                <div>
+                                    Picture
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-sun-o fa-2x"></i>
+                                </div>
+                                <div>
+                                    Weather
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-laptop fa-2x"></i>
+                                </div>
+                                <div>
+                                    User
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style" style="background:url('img/profile.jpg');background-size: cover;">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
+                                </div>
+                                <div>
+                                    Twitter <i class="fa fa-twitter" style="float: right;line-height: 21px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-shopping-bag  fa-2x"></i>
+                                </div>
+                                <div>
+                                    Store
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-skype  fa-2x"></i>
+                                </div>
+                                <div>
+                                    Skype
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style text-center" style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504440/king-care_ccxidf.jpg');background-size: cover;background-position: center;">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
+                                </div>
+                                <div style="font-size: 10px;">
+                                    Candy Crush
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="head-box">
+                        <small>Играй и исследуй</small>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 box">
+                            <div class="box-style" style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504485/logo_jgngah.png');background-size: cover;background-position: center;">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
+                                </div>
+                                <div style="font-size: 10px;">
+                                    Xbox
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-music fa-2x"></i>
+                                </div>
+                                <div style="font-size: 10px;">
+                                    Music
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-film fa-2x"></i>
+                                </div>
+                                <div style="font-size: 10px;">
+                                    Film
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style" style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504540/microsoft-solitaire-collection-02-535x535_bactpx.png');background-size: cover;background-position: center;">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
+                                </div>
+                                <div style="font-size: 10px;">
+				    Игры
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style" style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504576/1200x630bb_juslti.jpg');background-size: cover;background-position: center;">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
+                                </div>
+                                <div style="font-size: 10px;">
+                                    Minecraft
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style" style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504589/shortcut-icon-180-393c2144_lifwjy.png');background-size: cover;background-position: center;">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
+                                </div>
+                                <div style="font-size: 10px;">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-xs-push-4 box">
+                            <div class="box-style" style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503395/bank_cf8dgr.jpg');background-size: 130%;background-position: center;">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
+                                </div>
+                                <div>
+                                    Новости
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-xs-pull-8 box">
+                            <div class="box-style" style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504662/maxresdefault_live_bwb3qd.jpg');background-size: cover;background-position: center;">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
+                                </div>
+                                <div>
+                                    Money
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style" style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504684/unnamed_is6kxn.png');background-size: cover;background-position: center;">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
+                                </div>
+                                <div style="font-size: 10px;">
+					
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style" style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500503787/onenote-amazon-app-store-100361701-large_m6lbsu.jpg');background-size: cover;background-position: center;">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
+                                </div>
+                                <div style="font-size:12px;">
+                                    OneNote
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 box">
+                            <div class="box-style" style="background:url('http://res.cloudinary.com/dr5ei3rt1/image/upload/v1500504701/office2016logo_uw8zcd.png');background-size: cover;background-position: center;">
+                                <div class="icon-bottom text-center" style="margin: 20px;">
+                                    <i class="fa fa-twitter fa-2x" style="color: rgba(0,0,0,0);"></i>
+                                </div>
+                                <div style="font-size:10px;">
+                                    Office
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="nav navbar-inverse navbar-fixed-bottom footer text-center">
+        <div class="fluid-container">
+            <div class="row">
+                <div class="left">
+                    <div class="col-xs-1-me">
+                        <div class="icon-bottom strat-win" id="strat-win">
+                            <i <img src="https://media.istockphoto.com/vectors/icon-vector-id953461400?></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-1-me">
+                        <div class="icon-bottom">
+                            <i class="fa fa-search fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-1-me">
+                        <div class="icon-bottom">
+                            <i class="fa fa-envelope fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-1-me" id="a1">
+                        <div class="icon-bottom">
+                            <i class="fa fa-folder fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-1-me" id="a2">
+                        <div class="icon-bottom">
+                            <i class="fa fa-picture-o fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-1-me" id="a3">
+                        <div class="icon-bottom">
+                            <i class="fa fa-film fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-1-me" id="a4">
+                        <div class="icon-bottom">
+                            <i class="fa fa-file-text-o fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-1-me" id="a5">
+                        <div class="icon-bottom">
+                            <i class="fa fa-id-card fa-2x"></i>
+                        </div>
+                    </div>
+                    <span class=".clearfix"></span>
+                </div>
+                <div class="right">
+                    <div class="col-xs-1-me" id="close-all">
+                    </div>
+                    <div class="col-xs-1-me">
+                        <div class="icon-bottom">
+                            <i class="fa fa-bell fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="date col-xs-1-me">
+                        <span id="time">00:00</span>
+                        <span id="history">00/00/0000</span>
+                    </div>
+                    <div class="col-xs-1-me">
+                        <div class="icon-bottom">
+                            <i class="fa fa-volume-up  fa-2x"></i>
+                        </div>
+                    </div>
+                    <div class="col-xs-1-me">
+                        <div class="icon-bottom">
+                            <i class="fa fa-chevron-up fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script  src="js/index.js"></script>
+
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
